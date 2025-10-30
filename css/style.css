@@ -1,0 +1,197 @@
+/* ======= RESET ======= */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ======= CABECERA ======= */
+.cabecera {
+  background: linear-gradient(135deg, #007bff, #5b9bd5);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.foto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid white;
+  object-fit: cover;
+}
+
+.info h1 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.info p {
+  margin: 0.3rem 0 0;
+  font-size: 1.4rem;
+  opacity: 0.9;
+}
+
+.botones {
+  display: flex;
+  gap: 1rem;
+}
+
+.botones button {
+  background: white;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  transition: background 0.3s;
+}
+
+.botones button:hover {
+  background: #e0e0e0;
+}
+
+/* ======= CUERPO ======= */
+.cuerpo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.columna.izquierda {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.centro {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2, h3 {
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1.8rem;
+}
+
+.fecha {
+  font-size: 1.3rem;
+  color: #555;
+}
+
+/* ======= IDIOMAS ======= */
+.idiomas {
+  margin-top: 2rem;
+}
+
+.idiomas h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.idioma {
+  margin-bottom: 1.5rem;
+}
+
+.idioma span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.barra {
+  background-color: #ddd;
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.nivel {
+  height: 100%;
+  background-color: #007bff;
+  width: 0%;
+  border-radius: 10px;
+  transition: width 1.5s ease-in-out;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1.3rem;
+  color: #555;
+  background: #f0f0f0;
+  margin-top: 2rem;
+}
+
+/* ======= MODO OSCURO ======= */
+body.dark {
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+}
+
+body.dark .cabecera {
+  background: linear-gradient(135deg, #1e90ff, #005bbb);
+}
+
+body.dark .columna.izquierda,
+body.dark .centro {
+  background: #2b2b2b;
+  box-shadow: 0 0 8px rgba(255,255,255,0.1);
+}
+
+body.dark footer {
+  background: #111;
+  color: #ccc;
+}
+
+body.dark .barra {
+  background-color: #444;
+}
+
+body.dark .nivel {
+  background-color: #1e90ff;
+}
+
+body.dark .botones button {
+  background: #2b2b2b;
+  color: #fff;
+}
+
+body.dark .botones button:hover {
+  background: #444;
+}
