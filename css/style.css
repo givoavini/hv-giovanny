@@ -313,3 +313,22 @@ display:none;
 }
 
 }
+/* ===== FORZAR COLORES EN PDF ===== */
+
+@media print {
+
+*{
+-webkit-print-color-adjust: exact;
+print-color-adjust: exact;
+}
+
+body{
+background:white;
+color:black;
+}
+
+#cv{
+background:white;
+}
+
+}
