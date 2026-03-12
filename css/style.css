@@ -286,3 +286,30 @@ color:white;
 body.dark .botones button:hover{
 background:#444;
 }
+/* ============================
+   FORMATO PDF A4
+============================ */
+
+@media print {
+
+body{
+background:white;
+}
+
+#cv{
+width:210mm;
+min-height:297mm;
+margin:auto;
+padding:20mm;
+background:white;
+}
+
+.botones{
+display:none;
+}
+
+footer{
+display:none;
+}
+
+}
