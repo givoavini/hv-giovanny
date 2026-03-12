@@ -1,4 +1,6 @@
-/* ===== VARIABLES PROFESIONALES ===== */
+/* ================================
+   VARIABLES PROFESIONALES
+================================ */
 
 :root{
 --color-primario:#007bff;
@@ -10,7 +12,9 @@
 --radio:12px;
 }
 
-/* ===== RESET ===== */
+/* ================================
+   RESET
+================================ */
 
 html{
 font-size:62.5%;
@@ -31,7 +35,9 @@ margin:0;
 transition:all .3s ease;
 }
 
-/* ===== CONTENEDOR PRINCIPAL ===== */
+/* ================================
+   CONTENEDOR PRINCIPAL
+================================ */
 
 #cv{
 max-width:1000px;
@@ -39,7 +45,9 @@ margin:auto;
 animation:fadeIn .8s ease;
 }
 
-/* ===== CABECERA ===== */
+/* ================================
+   CABECERA
+================================ */
 
 .cabecera{
 background:linear-gradient(135deg,var(--color-primario),var(--color-secundario));
@@ -77,7 +85,9 @@ font-size:1.4rem;
 opacity:.9;
 }
 
-/* ===== BOTONES ===== */
+/* ================================
+   BOTONES
+================================ */
 
 .botones{
 display:flex;
@@ -102,7 +112,9 @@ box-shadow:0 4px 10px rgba(0,0,0,.15);
 background:#f0f0f0;
 }
 
-/* ===== CUERPO ===== */
+/* ================================
+   CUERPO
+================================ */
 
 .cuerpo{
 display:grid;
@@ -111,7 +123,9 @@ gap:2rem;
 padding:2rem;
 }
 
-/* ===== TARJETAS ===== */
+/* ================================
+   TARJETAS
+================================ */
 
 .columna.izquierda,
 .centro{
@@ -128,7 +142,9 @@ transform:translateY(-4px);
 box-shadow:0 14px 30px rgba(0,0,0,.12);
 }
 
-/* ===== SECCIONES ===== */
+/* ================================
+   SECCIONES
+================================ */
 
 section{
 margin-bottom:2rem;
@@ -139,7 +155,9 @@ color:var(--color-primario);
 margin-bottom:1rem;
 }
 
-/* ===== LISTAS ===== */
+/* ================================
+   LISTAS
+================================ */
 
 ul{
 padding-left:1.8rem;
@@ -149,12 +167,26 @@ ul li{
 margin-bottom:.5rem;
 }
 
-/* ===== EXPERIENCIA ===== */
+/* ================================
+   EXPERIENCIA (TIMELINE)
+================================ */
 
 .experiencia{
 border-left:3px solid var(--color-primario);
 padding-left:1.5rem;
 margin-bottom:1.5rem;
+position:relative;
+}
+
+.experiencia::before{
+content:"";
+position:absolute;
+left:-7px;
+top:6px;
+width:10px;
+height:10px;
+background:var(--color-primario);
+border-radius:50%;
 }
 
 .fecha{
@@ -163,7 +195,9 @@ color:#666;
 margin-bottom:.5rem;
 }
 
-/* ===== IDIOMAS ===== */
+/* ================================
+   IDIOMAS
+================================ */
 
 .idiomas{
 margin-top:2rem;
@@ -199,7 +233,9 @@ border-radius:10px;
 transition:width 1.5s ease-in-out;
 }
 
-/* ===== FOOTER ===== */
+/* ================================
+   FOOTER
+================================ */
 
 footer{
 text-align:center;
@@ -211,20 +247,27 @@ margin-top:2rem;
 border-radius:var(--radio);
 }
 
-/* ===== ANIMACIONES ===== */
+/* ================================
+   ANIMACIONES
+================================ */
 
 @keyframes fadeIn{
+
 from{
 opacity:0;
 transform:translateY(15px);
 }
+
 to{
 opacity:1;
 transform:translateY(0);
 }
+
 }
 
-/* ===== RESPONSIVE ===== */
+/* ================================
+   RESPONSIVE
+================================ */
 
 @media (max-width:900px){
 
@@ -248,7 +291,9 @@ justify-content:center;
 
 }
 
-/* ===== MODO OSCURO ===== */
+/* ================================
+   MODO OSCURO
+================================ */
 
 body.dark{
 background:#1e1e1e;
@@ -286,14 +331,21 @@ color:white;
 body.dark .botones button:hover{
 background:#444;
 }
-/* ============================
-   FORMATO PDF A4
-============================ */
 
-@media print {
+/* ================================
+   FORMATO PDF A4
+================================ */
+
+@media print{
+
+*{
+-webkit-print-color-adjust: exact;
+print-color-adjust: exact;
+}
 
 body{
 background:white;
+color:black;
 }
 
 #cv{
@@ -313,28 +365,10 @@ display:none;
 }
 
 }
-/* ===== FORZAR COLORES EN PDF ===== */
 
-@media print {
-
-*{
--webkit-print-color-adjust: exact;
-print-color-adjust: exact;
-}
-
-body{
-background:white;
-color:black;
-}
-
-#cv{
-background:white;
-}
-
-}
-/* =========================
-   ESTILO PDF
-========================= */
+/* ================================
+   TEMPLATE PDF
+================================ */
 
 #cv-pdf{
 
@@ -347,6 +381,8 @@ font-family:Arial, Helvetica, sans-serif;
 
 background:white;
 color:black;
+
+line-height:1.6;
 
 }
 

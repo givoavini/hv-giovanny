@@ -15,7 +15,7 @@ document.body.classList.contains("dark") ? "☀️" : "🌙";
 
 
 // ============================
-// 📊 ANIMACIÓN BARRAS IDIOMA
+// 📊 ANIMACIÓN BARRAS IDIOMAS
 // ============================
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -52,7 +52,6 @@ const es = idiomaActual === "es";
 idiomaActual = es ? "en" : "es";
 
 idiomaBtn.textContent = es ? "🇪🇸 ES" : "🇬🇧 EN";
-
 
 if(es){
 
@@ -117,29 +116,10 @@ document.querySelector("footer p").textContent =
 
 document.getElementById("pdf-btn").addEventListener("click", () => {
 
-const element = document.getElementById("cv");
-
-const opt = {
-
-margin:0,
-
-filename:"Giovanny_Vera_CV.pdf",
-
-image:{type:"jpeg",quality:1},
-
-html2canvas:{scale:3},
-
-jsPDF:{unit:"mm",format:"a4",orientation:"portrait"}
-
-};
-
-html2pdf().set(opt).from(element).save();
-
-});
-
-document.getElementById("pdf-btn").addEventListener("click", function(){
-
 const element = document.getElementById("cv-pdf");
+
+/* Mostrar temporalmente el template */
+element.style.display = "block";
 
 const options = {
 
@@ -153,7 +133,7 @@ quality:1
 },
 
 html2canvas:{
-scale:3
+scale:4
 },
 
 jsPDF:{
@@ -164,6 +144,11 @@ orientation:"portrait"
 
 };
 
-html2pdf().set(options).from(element).save();
+html2pdf().set(options).from(element).save().then(() => {
+
+/* Volver a ocultarlo */
+element.style.display = "none";
+
+});
 
 });
