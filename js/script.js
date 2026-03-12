@@ -136,3 +136,34 @@ jsPDF:{unit:"mm",format:"a4",orientation:"portrait"}
 html2pdf().set(opt).from(element).save();
 
 });
+
+document.getElementById("pdf-btn").addEventListener("click", function(){
+
+const element = document.getElementById("cv-pdf");
+
+const options = {
+
+margin:10,
+
+filename:"CV_Giovanny_Vera.pdf",
+
+image:{
+type:"jpeg",
+quality:1
+},
+
+html2canvas:{
+scale:3
+},
+
+jsPDF:{
+unit:"mm",
+format:"a4",
+orientation:"portrait"
+}
+
+};
+
+html2pdf().set(options).from(element).save();
+
+});

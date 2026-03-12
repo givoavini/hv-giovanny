@@ -332,3 +332,63 @@ background:white;
 }
 
 }
+/* =========================
+   ESTILO PDF
+========================= */
+
+#cv-pdf{
+
+width:210mm;
+min-height:297mm;
+
+padding:20mm;
+
+font-family:Arial, Helvetica, sans-serif;
+
+background:white;
+color:black;
+
+}
+
+.pdf-header{
+
+border-bottom:2px solid #333;
+margin-bottom:20px;
+padding-bottom:10px;
+
+}
+
+#cv-pdf h1{
+
+font-size:24px;
+margin:0;
+
+}
+
+#cv-pdf h2{
+
+font-size:18px;
+margin-top:20px;
+border-bottom:1px solid #ddd;
+
+}
+
+#cv-pdf h3{
+
+font-size:16px;
+margin-top:10px;
+
+}
+
+#cv-pdf ul{
+
+padding-left:18px;
+
+}
+
+#cv-pdf p{
+
+font-size:14px;
+line-height:1.5;
+
+}
